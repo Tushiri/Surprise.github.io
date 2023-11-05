@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>I Love You</title>
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+	@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+	body {
+		font-family: 'Indie Flower', cursive !important;
+		background: rgb(37, 36, 29);
+		margin: 0;
+		padding: 0;
+	}
+
+	::selection {
+		background: transparent;
+	}
+
+	h4 {
+		font-size: 24px;
+		line-height: 1px;
+		font-family: 'Amatic SC', cursive !important;
+	}
+
+	.color1 {
+		color: #1BBC9B;
+	}
+
+	.color2 {
+		color: #C0392B;
+	}
+
+	.card {
+		color: #013243;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 300px;
+		height: 400px;
+		background: #e0e1dc;
+		transform-style: preserve-3d;
+		transform: translate(-50%, -50%) perspective(2000px);
+		box-shadow: inset 10px 0 10px rgba(0, 0, 0, 0.3), 5px 0 30px rgba(0, 0, 0, 0.3);
+		transition: 1s;
+	}
+
+	.card:hover {
+		transform: translate(-50%, -50%) perspective(2000px) rotate(15deg) scale(1.2);
+		box-shadow: inset 5px 0 10px rgba(0, 0, 0, 0.3), 0 10px 100px rgba(0, 0, 0, 0.3);
+	}
+
+	.card:before {
+		content: '';
+		position: absolute;
+		top: -5px;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		background: #BAC1BA;
+		transform-origin: bottom;
+		transform: skewX(-45deg);
+	}
+
+	.card:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: -5px;
+		width: 5px;
+		height: 100%;
+		background: #92A29C;
+		transform-origin: left;
+		transform: skewY(-45deg);
+	}
+
+	.card .imgBox {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		transform-origin: left;
+		transition: 0.7s;
+	}
+
+	.card .bark {
+		position: absolute;
+		background: #e0e1dc;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: 0.7s;
+	}
+
+	.card .imgBox img {
+		min-width: 300px;
+		max-height: 395px;
+	}
+
+	.card:hover .imgBox {
+		transform: rotateY(-135deg);
+	}
+
+	.card:hover .bark {
+		opacity: 1;
+		transition: 0.6s;
+		box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.3) inset;
+	}
+
+	.card .details {
+		position: absolute;
+		top: 0;
+		left: 0;
+		box-sizing: border-box;
+		padding: 0 0 0 20px;
+		z-index: -1;
+		margin-top: 30px;
+	}
+
+	.card .details p {
+		font-size: 15px;
+		line-height: 5px;
+		padding: 0 0 0 20px;
+		margin-top: -0.5px;
+	}
+
+	.card .details h4 {
+		text-align: center;
+		margin-top: 1px;
+	}
+.gift {
+		text-align: left;
+		margin-top: -20px;
+	}
+
+	.text-right {
+		text-align: right;
+	}
+	.text-below-card {
+			font-size: 25px; 
+			text-align: center;
+			margin-top: 50px;   
+		}
+
+		.text-below-card p{
+			color: #BAC1BA;   
+		}
+.claim {
+		text-align: left;
+		margin-top: 1px;
+	}
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 25px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 10px;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
+</style>
+
+<body>
+<!-- Text below the card -->
+	<div class="text-below-card">
+		<p>Hi Ali!!! <3</p>
+		<p>This is my Last Gift for you!!!</p>
+	</div>
+	<div class="card">
+		<div class="imgBox">
+			<div class="bark"></div>
+			<img src="assets/bgpic1.jpg" alt="mukha kang hakdog refresh mo!!">
+		</div>
+		<div class="details">
+			<h4 class="color1">Are you enjoying yourself so far?</h4>
+			<h4 class="color2 margin">Hope you are hehe (⁠｡⁠・⁠/⁠/⁠ε⁠/⁠/⁠・⁠｡⁠)</h4>
+			
+			<p>To the woman I love,</p>
+			<p>Whenever you feel down</p>
+			<p>Always remember, you are not alone</p>
+			<p>I will be there for you,</p>
+			<p>I will do my best</p>
+			<p>to make you the happiest</p>
+			<p>woman in the entire world <3</p>
+			<p>And don't forget</p>
+			<p>Always wear your beautiful smile. :)</p>
+			<p>I love you "her/his name"</p>
+			<p><br></p>
+		<div class="gift">
+			<span>Here's My Small Gift for you!! <br> pls enjoy the song <3</span>
+		</div>
+		<div class="claim">
+		<button class="button-30" role="button" onclick="document.location='flowers.html'">
+			(⁠◍⁠•⁠ᴗ⁠•⁠◍⁠)
+		</button>
+			<p class="text-right">Sincerely,</p>
+			<p class="text-right">"Your Handsome Boyfriend"♥</p>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
+
+
