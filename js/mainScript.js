@@ -855,8 +855,7 @@ document.getElementById("dismiss-popup-btn2").addEventListener("click",function(
 
 
 
-// post it style logic
-const link = document.querySelector(".details");
+const link = document.querySelector(".myLink");
 
 link.onmouseenter = () => {
 var r1 = document.querySelector(':root');
@@ -867,9 +866,9 @@ var r1 = document.querySelector(':root');
   r1.style.setProperty('--pink1', '#ff8080');
 
 // default variation
-r1.style.setProperty('--red1', 'white');
-r1.style.setProperty('--darkPink1', 'aquamarine');
-r1.style.setProperty('--pink1', 'mediumpurple');
+// r1.style.setProperty('--red1', 'white');
+// r1.style.setProperty('--darkPink1', 'aquamarine');
+// r1.style.setProperty('--pink1', 'mediumpurple');
 
   r1.style.setProperty('--fourDefaultBg', 'white')
   r1.style.setProperty('--pss', '4.5rem')
